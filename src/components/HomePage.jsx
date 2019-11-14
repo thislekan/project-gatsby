@@ -42,7 +42,7 @@ const HomePage = ({ content }) => (
           <div className="blog-section__banner__wrapper">
             {content.logos.map((logo, index) => (
               <img
-                src={logo.image}
+                src={logo.image ? logo.image.publicURL : ''}
                 key={index}
                 alt="Sponsors"
                 className="logo-img"
