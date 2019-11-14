@@ -1,0 +1,39 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  padding: 0 2rem;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a,
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    padding: 0 5rem;
+  }
+}
+
+@media screen and (min-width: 784px) {
+  body {
+    padding: 0 10rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    padding: 0 15rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  body {
+    padding: 0 20%;
+  }
+}

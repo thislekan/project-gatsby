@@ -1,25 +1,42 @@
-import React from 'react'
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 
-import Layout from '../components/Layout'
+import Layout from '../components/Layout';
+import Post from '../components/posts/Post';
 
-export function BlogPostTemplate({}) {
-  return (
-    <>
-      <h1>Blog Post Page</h1>
-    </>
-  )
-}
-
-BlogPostTemplate.propTypes = {}
-
-function BlogPost() {
+function BlogPost(props) {
   return (
     <Layout>
-      <BlogPostTemplate />
+      <StaticQuery
+        query={graphql`
+          query($path: String!) {
+            markdownRemark(fields: { slug: { eq: $path } }) {
+              html
+              timeToRead
+              frontmatter {
+                date(formatString: "MMMM DD YYYY")
+                hero {
+                  heading
+                  image {
+                    childImageSharp {
+                      fluid(fit: COVER) {
+                        src
+                      }
+                    }
+                  }
+                }
+                title
+                templateKey
+              }
+            }
+          }
+        `}
+        render={() => <Post data={props.data} />}
+      />
     </Layout>
-  )
+  );
 }
 
-BlogPost.propTypes = {}
+BlogPost.propTypes = {};
 
-export default BlogPost
+export default BlogPost;

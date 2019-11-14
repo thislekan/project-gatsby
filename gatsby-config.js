@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: 'Recrut Be',
-    description:
-      'simple business website using Gatsby and NetlifyCMS',
+    description: 'simple business website using Gatsby and NetlifyCMS',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -66,4 +66,4 @@ module.exports = {
     },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
-}
+};

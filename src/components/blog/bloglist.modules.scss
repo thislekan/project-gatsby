@@ -1,0 +1,51 @@
+@import "../../styles/blog-snippet.scss";
+
+.bloglist {
+  padding: 8rem 0 5rem 0;
+  min-height: calc(100vh - 19rem);
+
+  .blog-cards {
+    &__content {
+      h5 {
+        margin: 1.5rem 0;
+        height: unset;
+      }
+    }
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .link-div {
+      a {
+        font-size: 1.6rem;
+        color: #d23669;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .bloglist {
+    padding: 8rem;
+    min-height: calc(100vh - 22rem);
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .bloglist {
+    padding: 8rem 30%;
+  }
+}
+
+@media screen and (min-width: 845px) {
+  .bloglist {
+    .blog-cards {
+      height: 26rem;
+    }
+  }
+}

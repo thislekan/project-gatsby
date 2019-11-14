@@ -1,0 +1,370 @@
+@import "./variables.scss";
+
+.homepage {
+  padding-top: 6rem;
+  font-size: 1.6rem;
+
+  &__wrapper {
+    .hero {
+      height: calc(100vh - 6rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &__left-div {
+        h1 {
+          font-size: 3.1rem;
+          font-weight: 500;
+          letter-spacing: 0.05rem;
+          margin-bottom: 2.2rem;
+          color: map-get($colors, header-black);
+
+          .small-dot {
+            height: 1px;
+            width: 1px;
+            border-radius: 100%;
+          }
+        }
+        p {
+          font-size: 1.79rem;
+          color: map-get($colors, obscure-black);
+          height: 7.9rem;
+          font-weight: 400;
+        }
+      }
+
+      &__right-div {
+        height: 25.3rem;
+        width: 26.2rem;
+      }
+    }
+
+    .intro {
+      &__header {
+        margin-top: 3.9rem;
+        margin-bottom: 5.7rem;
+        font-size: 2rem;
+        color: map-get($colors, blackish-teal);
+        font-weight: bold;
+
+        h3 {
+          margin: 0;
+        }
+      }
+
+      &__body {
+        &__img-div {
+          display: none;
+        }
+
+        &__text-div {
+          h5 {
+            font-size: 2rem;
+            color: map-get($colors, blackish-teal);
+            margin: 0;
+            margin-bottom: 1.95rem;
+          }
+
+          p {
+            color: map-get($colors, header-black);
+            font-size: 1.6rem;
+            line-height: 2.9rem;
+          }
+        }
+      }
+    }
+
+    .blog-section {
+      &__banner {
+        &__wrapper {
+          background: map-get($colors, cream-background);
+          height: 14.5rem;
+          margin: 4.5rem -2rem 5.3rem -2rem;
+          display: flex;
+          align-items: center;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          overflow-y: hidden;
+          justify-content: space-between;
+          scroll-behavior: smooth;
+          scroll-snap-type: x mandatory;
+
+          .logo-img {
+            height: 2.4rem;
+            width: 7.9rem;
+            margin: 0 7.3rem;
+          }
+        }
+      }
+
+      &__articles {
+        &__wrapper {
+          height: 66rem;
+          overflow-y: hidden;
+        }
+      }
+
+      &__readmore-div {
+        margin: 3.3rem 0 8.6rem 0;
+        text-align: center;
+
+        button {
+          border: 1px solid map-get($colors, border-blue);
+          border-radius: 3.2rem;
+          height: 3.8rem;
+          width: 14rem;
+          background: map-get($colors, plain-white);
+          color: map-get($colors, active-blue);
+          font-size: 1.3rem;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 386px) {
+  .homepage {
+    &__wrapper {
+      .blog-section {
+        &__articles {
+          &__wrapper {
+            height: 65rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .homepage {
+    &__wrapper {
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 3rem;
+      }
+
+      .intro {
+        &__header {
+          text-align: center;
+          margin-bottom: 2.5rem;
+          margin-top: 1.9rem;
+        }
+        &__body {
+          display: grid;
+          grid-template-columns: auto 60%;
+          grid-column-gap: 3rem;
+
+          &__img-div {
+            display: unset;
+            height: 25rem;
+            width: 100%;
+            flex-direction: column;
+            display: flex;
+            align-self: center;
+          }
+
+          &__text-div {
+            margin-top: 4rem;
+          }
+        }
+      }
+
+      .blog-section {
+        &__banner {
+          &__wrapper {
+            margin: 10rem -5rem 5.3rem -5rem;
+          }
+        }
+
+        &__articles {
+          &__wrapper {
+            height: 28rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 669px) {
+  .homepage {
+    .blog-section {
+      &__articles {
+        &__wrapper {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 784px) {
+  .homepage {
+    .blog-section {
+      &__banner {
+        &__wrapper {
+          margin: 10rem -10rem 5.3rem -10rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 845px) {
+  .homepage {
+    &__wrapper {
+      .hero {
+        &__left-div {
+          p {
+            width: 35.5rem;
+          }
+        }
+      }
+
+      .blog-section {
+        &__articles {
+          &__wrapper {
+            height: 35rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 953px) {
+  .homepage {
+    &__wrapper {
+      .blog-section {
+        &__articles {
+          &__wrapper {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            height: 32rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .homepage {
+    &__wrapper {
+      .hero {
+        grid-column-gap: 10.6rem;
+      }
+      .intro {
+        &__body {
+          grid-column-gap: 8rem;
+
+          &__img-div {
+            height: 37rem;
+            width: 23.6rem;
+            margin-left: 5rem;
+          }
+
+          &__text-div {
+            margin-top: 11rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .homepage {
+    .blog-section {
+      &__banner {
+        &__wrapper {
+          margin: 10rem -15rem 5.3rem -15rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .homepage {
+    .hero {
+      &__left-div {
+        h1 {
+          width: 42.9rem;
+          height: 5.7rem;
+          font-size: 4.6rem;
+          color: map-get($colors, blackish-teal);
+          margin-bottom: 2.02rem;
+        }
+        p {
+          width: 49.5rem;
+          font-size: 2.2rem;
+          color: map-get($colors, blackish-teal);
+          height: 7rem;
+        }
+      }
+
+      &__right-div {
+        width: 38.4rem;
+        height: 37.1rem;
+      }
+    }
+
+    .intro {
+      &__body {
+        grid-column-gap: 20.2rem;
+        &__text-div {
+          width: 54.4rem;
+          .heading {
+            width: 25.4rem;
+          }
+          .body {
+            margin-right: 1.3rem;
+            width: 54.5rem;
+          }
+        }
+        &__img-div {
+          margin-left: 14.4rem;
+        }
+      }
+    }
+
+    .blog-section {
+      &__banner {
+        &__wrapper {
+          padding: 0 20.9rem 0 17.6rem;
+
+          .logo-img {
+            height: 4.4rem;
+            width: 14.3rem;
+            margin: 0;
+          }
+        }
+      }
+      &__articles {
+        &__wrapper {
+          margin: 0 -3rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .homepage {
+    .blog-section {
+      &__banner {
+        &__wrapper {
+          margin: 10rem -33.5% 5.3rem -33.5%;
+          padding: 0 33.5%;
+        }
+      }
+    }
+  }
+}
