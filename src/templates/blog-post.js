@@ -31,7 +31,13 @@ function BlogPost(props) {
             }
           }
         `}
-        render={() => <Post data={props.data} />}
+        render={() => (
+          <Post
+            data={props.data}
+            next={props.pageContext.next}
+            previous={props.pageContext.previous}
+          />
+        )}
       />
     </Layout>
   );

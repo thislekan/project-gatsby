@@ -6,7 +6,7 @@ import BlogTemplate from '../components/blog/Blog';
 
 const BlogPage = (props) => {
   return (
-    <Layout>
+    <Layout path="/blog">
       <BlogTemplate
         pageContext={props.pageContext}
         data={props.data.allMarkdownRemark.nodes}

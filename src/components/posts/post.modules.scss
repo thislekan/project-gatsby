@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import '../../styles/variables.scss';
 
 .blogpost {
   padding: 7rem 0 4rem 0;
@@ -70,6 +70,26 @@
       }
     }
   }
+
+  &__footer {
+    margin-top: 4rem;
+    &__node {
+      margin-bottom: 4rem;
+      p {
+        font-size: 1.4rem;
+        color: #394e5d;
+        font-weight: 600;
+        margin: 0.5rem 0;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 800;
+        color: #d23669;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -94,6 +114,18 @@
         line-height: unset;
       }
     }
+
+    &__footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 5rem;
+
+      &__node {
+        p {
+          margin: 1rem 0;
+        }
+      }
+    }
   }
 }
 
@@ -101,7 +133,7 @@
   .blogpost {
     padding: 10rem 10rem 3rem;
 
-    .content {
+    &__content {
       p {
         font-size: 2rem;
         line-height: 3.2rem;
