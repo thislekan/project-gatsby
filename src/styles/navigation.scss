@@ -72,9 +72,13 @@
           width: 0.8rem;
           background: map-get($colors, active-blue);
           border-radius: 100%;
+          display: none;
         }
 
         &--active {
+          span {
+            display: unset;
+          }
           a {
             margin-left: 0.85rem;
           }

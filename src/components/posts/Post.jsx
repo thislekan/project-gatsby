@@ -1,7 +1,9 @@
-import React from "react";
-import "./post.modules.scss";
+import React from 'react';
+import { Link } from 'gatsby';
 
-const Post = ({ data }) => {
+import './post.modules.scss';
+
+const Post = ({ data, next, previous }) => {
   const { markdownRemark } = data;
   const { frontmatter, html, timeToRead } = markdownRemark;
   return (
@@ -19,6 +21,25 @@ const Post = ({ data }) => {
         className="blogpost__content"
         dangerouslySetInnerHTML={{ __html: html }}
       />
+      <div className="blogpost__footer">
+        <div className="blogpost__footer__node">
+          {previous && <>
+          <p>Previous Article: </p>
+          <Link to={previous.fields.slug}>
+            {previous.frontmatter.title}
+          </Link>
+          </>}
+        </div>
+        <div className="blogpost__footer__node">
+          {next && <>
+            <p>Next Article: </p>
+            <Link to={next.fields.slug}>
+              {next.frontmatter.title}
+            </Link>
+          </>}
+        </div>
+      </div>
+      {console.log(next, previous)}
     </div>
   );
 };

@@ -26,7 +26,7 @@ function Layout(props) {
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
       </Helmet>
-      <Navigation />
+      <Navigation path={props.path} />
       <main>{props.children}</main>
       <Footer />
     </div>

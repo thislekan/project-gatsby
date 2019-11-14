@@ -44,7 +44,7 @@ const IndexPage = () => {
   `);
 
   return (
-    <Layout>
+    <Layout path="/">
       <HomePage content={data.markdownRemark.frontmatter} />
     </Layout>
   );
