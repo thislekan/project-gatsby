@@ -39,7 +39,6 @@ const Post = ({ data, next, previous }) => {
           </>}
         </div>
       </div>
-      {console.log(next, previous)}
     </div>
   );
 };
