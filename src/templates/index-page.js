@@ -35,9 +35,6 @@ const IndexPage = () => {
           }
           title
           logos {
-            # image {
-            #   publicURL
-            # }
             image
             link
           }
