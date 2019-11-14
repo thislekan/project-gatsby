@@ -1,21 +1,32 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/Layout';
 
-export function AboutPageTemplate({}) {
+export function AboutPageTemplate({ data }) {
   return (
-    <>
-      <h1>About Page</h1>
-    </>
+    <div style={{ paddingTop: '8rem', minHeight: 'calc(100vh - 14rem)' }}>
+      <h1>{data.frontmatter.title}</h1>
+    </div>
   );
 }
 
 AboutPageTemplate.propTypes = {};
 
 function AboutPage() {
+  const { markdownRemark } = useStaticQuery(graphql`
+    query AboutPageQuery {
+      markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
+        frontmatter {
+          title
+        }
+      }
+    }
+  `);
+
   return (
     <Layout path="/about">
-      <AboutPageTemplate />
+      <AboutPageTemplate data={markdownRemark} />
     </Layout>
   );
 }
