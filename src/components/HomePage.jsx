@@ -1,4 +1,5 @@
 import React from 'react';
+import { navigate } from 'gatsby';
 import Img from 'gatsby-image';
 import { Markdown } from 'react-showdown';
 
@@ -55,7 +56,7 @@ const HomePage = ({ content }) => (
             <Snippets />
           </div>
           <div className="blog-section__readmore-div">
-            <button>Read more</button>
+            <button onClick={() => navigate('/blog')}>Read more</button>
           </div>
         </div>
       </section>
