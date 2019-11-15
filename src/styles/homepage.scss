@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@import './variables.scss';
 
 .homepage {
   padding-top: 6rem;
@@ -15,7 +15,7 @@
       &__left-div {
         h1 {
           font-size: 3.1rem;
-          font-weight: 500;
+          font-weight: 600;
           letter-spacing: 0.05rem;
           margin-bottom: 2.2rem;
           color: map-get($colors, header-black);
@@ -50,6 +50,9 @@
 
         h3 {
           margin: 0;
+          font-weight: 700;
+          font-size: 2.6rem;
+          line-height: 3.2rem;
         }
       }
 
@@ -64,6 +67,8 @@
             color: map-get($colors, blackish-teal);
             margin: 0;
             margin-bottom: 1.95rem;
+            font-weight: 700;
+            line-height: 2.4rem;
           }
 
           p {
@@ -100,7 +105,7 @@
 
       &__articles {
         &__wrapper {
-          height: 66rem;
+          height: 68rem;
           overflow-y: hidden;
         }
       }
@@ -116,8 +121,9 @@
           width: 14rem;
           background: map-get($colors, plain-white);
           color: map-get($colors, active-blue);
-          font-size: 1.3rem;
-          font-weight: 400;
+          font-size: 1.4rem;
+          line-height: 2.7rem;
+          font-weight: 600;
         }
       }
     }
@@ -182,7 +188,7 @@
 
         &__articles {
           &__wrapper {
-            height: 28rem;
+            height: 33rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-gap: 2rem;
@@ -242,6 +248,11 @@
 @media screen and (min-width: 953px) {
   .homepage {
     &__wrapper {
+      .hero {
+        &__left-div {
+          color: map-get($colors, blackish-teal);
+        }
+      }
       .blog-section {
         &__articles {
           &__wrapper {
@@ -272,6 +283,7 @@
 
           &__text-div {
             margin-top: 11rem;
+            width: 45rem;
           }
         }
       }
@@ -281,10 +293,20 @@
 
 @media screen and (min-width: 1200px) {
   .homepage {
-    .blog-section {
-      &__banner {
-        &__wrapper {
-          margin: 10rem -15rem 5.3rem -15rem;
+    &__wrapper {
+      .hero {
+        &__header {
+          h3 {
+            font-size: 3.2rem;
+          }
+        }
+      }
+
+      .blog-section {
+        &__banner {
+          &__wrapper {
+            margin: 10rem -15rem 5.3rem -15rem;
+          }
         }
       }
     }

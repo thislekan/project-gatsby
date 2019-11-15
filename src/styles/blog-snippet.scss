@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@import './variables.scss';
 
 .blog-cards {
   margin: 3.6rem 0;
@@ -25,6 +25,7 @@
       color: map-get($colors, blackish-teal);
       margin: 2.7rem 0 0.9rem 0;
       overflow: hidden;
+      line-height: 2.7rem;
     }
 
     p {
@@ -46,8 +47,12 @@
       padding: unset;
 
       h5 {
-        margin-top: 2.1rem;
-        height: 4.5rem;
+        margin-top: 1rem;
+        height: 5.5rem;
+      }
+
+      p {
+        height: 4rem;
       }
     }
   }
@@ -62,6 +67,9 @@
     }
 
     &__content {
+      h5 {
+        margin-top: 2.1rem;
+      }
       &--hover {
         padding: 0 1rem;
       }
