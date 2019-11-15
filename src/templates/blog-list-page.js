@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import BlogTemplate from '../components/blog/Blog';
 
 const BlogPage = (props) => {
+  console.log(props);
   return (
     <Layout path="/blog">
       <BlogTemplate
@@ -21,6 +22,7 @@ export const blogListQuery = graphql`
       sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit
       skip: $skip
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
     ) {
       nodes {
         fields {
