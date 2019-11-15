@@ -53,7 +53,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
 
-  const postsPerPage = 4;
+  const postsPerPage = 8;
   const numPages = Math.ceil(posts.length / postsPerPage);
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
@@ -61,7 +61,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: path.resolve('./src/templates/blog-list-page.js'),
       context: {
         limit: postsPerPage,
-        skip: (i + 1) * postsPerPage,
+        skip: i * postsPerPage,
         numPages,
         currentPage: i + 1,
       },
