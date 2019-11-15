@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import PropTypes from 'prop-types';
 
 import Layout from '../components/Layout';
 
@@ -11,7 +12,9 @@ export function ContactPageTemplate({ data }) {
   );
 }
 
-ContactPageTemplate.propTypes = {};
+ContactPageTemplate.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 function ContactPage() {
   const { markdownRemark } = useStaticQuery(graphql`

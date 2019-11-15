@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 
 import './post.modules.scss';
 
@@ -23,24 +24,32 @@ const Post = ({ data, next, previous }) => {
       />
       <div className="blogpost__footer">
         <div className="blogpost__footer__node">
-          {previous && <>
-          <p>Previous Article: </p>
-          <Link to={previous.fields.slug}>
-            {previous.frontmatter.title}
-          </Link>
-          </>}
+          {previous && (
+            <>
+              <p>Previous Article: </p>
+              <Link to={previous.fields.slug}>
+                {previous.frontmatter.title}
+              </Link>
+            </>
+          )}
         </div>
         <div className="blogpost__footer__node">
-          {next && <>
-            <p>Next Article: </p>
-            <Link to={next.fields.slug}>
-              {next.frontmatter.title}
-            </Link>
-          </>}
+          {next && (
+            <>
+              <p>Next Article: </p>
+              <Link to={next.fields.slug}>{next.frontmatter.title}</Link>
+            </>
+          )}
         </div>
       </div>
     </div>
   );
+};
+
+Post.propTypes = {
+  data: PropTypes.object.isRequired,
+  next: PropTypes.object.isRequired,
+  previous: PropTypes.object.isRequired,
 };
 
 export default Post;
