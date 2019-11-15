@@ -2,6 +2,7 @@ import React from 'react';
 import { navigate } from 'gatsby';
 import Img from 'gatsby-image';
 import { Markdown } from 'react-showdown';
+import PropTypes from 'prop-types';
 
 import Snippets from '../components/Snippets';
 
@@ -62,5 +63,9 @@ const HomePage = ({ content }) => (
     </div>
   </div>
 );
+
+HomePage.propTypes = {
+  content: PropTypes.object.isRequired,
+};
 
 export default HomePage;

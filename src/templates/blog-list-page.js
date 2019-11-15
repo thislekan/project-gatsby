@@ -1,11 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 
 import Layout from '../components/Layout';
 import BlogTemplate from '../components/blog/Blog';
 
 const BlogPage = (props) => {
-  console.log(props);
   return (
     <Layout path="/blog">
       <BlogTemplate
@@ -14,6 +14,11 @@ const BlogPage = (props) => {
       />
     </Layout>
   );
+};
+
+BlogPage.propTypes = {
+  pageContext: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 export const blogListQuery = graphql`

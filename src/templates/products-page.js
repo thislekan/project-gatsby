@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 
 import Layout from '../components/Layout';
 
@@ -11,7 +12,7 @@ export function ProductsPageTemplate({ data }) {
   );
 }
 
-ProductsPageTemplate.propTypes = {};
+ProductsPageTemplate.propTypes = { data: PropTypes.object.isRequired };
 
 function ProductsPage() {
   const { markdownRemark } = useStaticQuery(graphql`

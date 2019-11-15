@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 
 import SnippetCard from '../SnippetCard';
 import './bloglist.modules.scss';
@@ -33,6 +34,11 @@ const BlogTemplate = (props) => {
       </div>
     </div>
   );
+};
+
+BlogTemplate.propTypes = {
+  pageContext: PropTypes.object.isRequired,
+  data: PropTypes.array.isRequired,
 };
 
 export default BlogTemplate;
