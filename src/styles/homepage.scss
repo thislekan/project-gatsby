@@ -317,15 +317,16 @@
   .homepage {
     .hero {
       &__left-div {
+        margin-top: -5rem;
+
         h1 {
-          width: 42.9rem;
           height: 5.7rem;
           font-size: 4.6rem;
           color: map-get($colors, blackish-teal);
           margin-bottom: 2.02rem;
         }
         p {
-          width: 49.5rem;
+          width: 50.5rem;
           font-size: 2.2rem;
           color: map-get($colors, blackish-teal);
           height: 7rem;
