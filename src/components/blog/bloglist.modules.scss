@@ -14,6 +14,8 @@
   }
 
   .blog-cards {
+    cursor: pointer;
+
     &__content {
       h5 {
         margin: 1.5rem 0;
@@ -45,16 +47,45 @@
   }
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 645px) {
   .bloglist {
-    padding: 8rem 30%;
+    padding: 8rem 0;
+
+    &__items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 3rem;
+    }
+
+    .blog-cards {
+      margin: unset;
+      &__content {
+        h5 {
+          height: 5.5rem;
+        }
+      }
+    }
   }
 }
 
-@media screen and (min-width: 845px) {
+@media screen and (min-width: 1129px) {
   .bloglist {
+    padding: 8rem 0;
+
+    &__items {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 2rem;
+    }
+
     .blog-cards {
-      height: 26rem;
+      height: unset;
+      margin: unset;
+
+      &__content {
+        h5 {
+          height: 5.5rem;
+        }
+      }
     }
   }
 }
